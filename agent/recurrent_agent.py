@@ -9,8 +9,11 @@ dotenv.load_dotenv()
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', 'lm-studio')
 LLM_MODEL = os.environ.get('LLM_MODEL', 'lmstudio-community/Phi-3.1-mini-4k-instruct-GGUF')
-llm = ChatOpenAI(model=LLM_MODEL)
 CHUNK_SIZE = os.environ.get('CHUNK_SIZE', 20)
+llm = ChatOpenAI(
+    model=LLM_MODEL,
+    base_url="http://172.30.240.1:1234/v1"
+    )
 
 class Topic(TypedDict):
     """Topic by line."""
@@ -40,7 +43,7 @@ class RecurrentAgent:
         self.user_prompt = user_prompt
         self.reviewer_system_prompt = reviewer_system_prompt
         self.reviewer_user_prompt = reviewer_user_prompt
-        self.summary = ""
+        self.summary = "```json {'topics':[]}```"
         self.lines=0
 
     def process_file(self):
@@ -50,7 +53,7 @@ class RecurrentAgent:
         with open(self.file_path, 'r') as file:
             self.lines = sum(1 for _ in file)
             file.seek(0)  # Reset file pointer to the beginning after counting lines
-            while chunk := file.read(self.chunk_size):
+            while chunk := list(file.readline() for _ in range(self.chunk_size)):
                 summary = self.invoke_agent(self.summary, chunk)
                 self.update_summary(summary)
 
@@ -62,6 +65,9 @@ class RecurrentAgent:
         """
 
         self.summary = summary
+
+        print("Updated summary:")
+        print(summary)
 
     def evaluate_conditions(self, chunk):
         """
@@ -91,8 +97,22 @@ class RecurrentAgent:
             [("system", self.system_prompt), ("user", self.user_prompt)]
         )
         prompt = prompt_template.invoke({"summary": summary, "lines": self.lines, "chunk":chunk})
+        print("Prompt:")
+        print(prompt)
         response = structured_llm.invoke(prompt)
 
         reviewed_response = self.review(response)
 
         return reviewed_response
+    
+    # localhost run with lm studio running in windows and agent running in wsl:
+#     curl http://172.30.240.1:1234/v1/chat/completions   -H "Content-Type: application/json"   -d '{
+#     "model": "unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF",
+#     "messages": [
+#       { "role": "system", "content": "Always answer in rhymes." },
+#       { "role": "user", "content": "Introduce yourself." }
+#     ],
+#     "temperature": 0.7,
+#     "max_tokens": -1,
+#     "stream": true
+# }'
