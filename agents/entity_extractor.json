@@ -1,0 +1,32 @@
+{
+    "system_prompt": "You are an expert entity extraction assistant. Your task is to identify and extract named entities from text.",
+    "user_prompt": "Analyze the following text and extract all named entities (people, organizations, locations). Return a JSON object with three arrays: 'people', 'organizations', and 'locations'. Each array should contain unique entity names. If a category has no entities, return an empty array for that category.",
+    "output_schema": {
+        "type": "object",
+        "properties": {
+            "people": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
+            "organizations": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
+            "locations": {
+                "type": "array",
+                "items": {"type": "string"}
+            }
+        },
+        "required": ["people", "organizations", "locations"]
+    },
+    "file_path": "examples/for_entity.txt",
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "llm_provider": {
+        "type": "openai",
+        "model": "gpt-4",
+        "api_key": "env:OPENAI_API_KEY",
+        "temperature": 0.2
+    },
+    "output_file": "extracted_entities.json"
+}

@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a document analysis assistant that identifies key concepts mentioned in text. Your task is to extract main ideas, terms, and concepts from the provided text and list them in order of importance.",
+  "user_prompt": "Review the following text and extract the key concepts mentioned. For each concept, provide the concept name and a brief description of how it's presented in the text. If the concept appears multiple times, note the frequency. Return the results as an array of objects with 'concept', 'description', and 'frequency' fields. If no significant concepts are found, return an empty array.",
+  "output_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "concept": {"type": "string"},
+        "description": {"type": "string"},
+        "frequency": {"type": "integer", "minimum": 1}
+      },
+      "required": ["concept", "description", "frequency"]
+    }
+  },
+  "file_path": "academic_paper.txt",
+  "chunk_size": 4000,
+  "chunk_overlap": 200,
+  "llm_provider": {
+    "type": "openai",
+    "model": "gpt-4",
+    "api_key": "env:OPENAI_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 1024
+  },
+  "max_retries": 3,
+  "write_output": false,
+  "output_file": "extracted_concepts.json"
+}

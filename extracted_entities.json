@@ -1,0 +1,230 @@
+[
+  {
+    "people": [
+      "Dr. Sarah Chen",
+      "Professor Michael Rodriguez",
+      "Sundar Pichai",
+      "Sam Altman"
+    ],
+    "organizations": [
+      "International Technology Policy Institute",
+      "Stanford University",
+      "Massachusetts Institute of Technology",
+      "Google",
+      "OpenAI"
+    ],
+    "locations": [
+      "United States",
+      "China",
+      "European Union"
+    ]
+  },
+  {
+    "people": [
+      "Sundar Pichai",
+      "Sam Altman",
+      "Demis Hassabis"
+    ],
+    "organizations": [
+      "Google",
+      "OpenAI",
+      "DeepMind",
+      "ITPI",
+      "Global AI Governance Council"
+    ],
+    "locations": [
+      "Silicon Valley",
+      "Beijing",
+      "London",
+      "North America",
+      "Europe",
+      "Asia",
+      "Phoenix",
+      "Singapore",
+      "New York",
+      "Hong Kong"
+    ]
+  },
+  {
+    "people": [
+      "Maria Rodriguez",
+      "David Thompson"
+    ],
+    "organizations": [
+      "Oxford University",
+      "World Economic Forum",
+      "European Commission",
+      "National Bureau of Economic Research",
+      "Goldman Sachs",
+      "Morgan Stanley"
+    ],
+    "locations": [
+      "Phoenix",
+      "Singapore",
+      "New York",
+      "Hong Kong",
+      "Scandinavia",
+      "Japan",
+      "South Korea",
+      "Davos"
+    ]
+  },
+  {
+    "people": [],
+    "organizations": [
+      "chs",
+      "Morgan Stanley",
+      "International Technology Policy Institute",
+      "World Bank",
+      "International Monetary Fund",
+      "OECD",
+      "Microsoft",
+      "Amazon",
+      "Tencent",
+      "Alibaba",
+      "European Union",
+      "Harvard University"
+    ],
+    "locations": [
+      "North America",
+      "Europe",
+      "Asia-Pacific",
+      "Washington DC",
+      "Brussels",
+      "Singapore",
+      "Toronto",
+      "Berlin",
+      "Tokyo"
+    ]
+  },
+  {
+    "people": [
+      "Dr. Emily Chen"
+    ],
+    "organizations": [
+      "Harvard University",
+      "London School of Economics",
+      "Stanford University",
+      "International Conference on Machine Learning",
+      "World AI Summit"
+    ],
+    "locations": [
+      "Toronto",
+      "Berlin",
+      "Tokyo",
+      "Silicon Valley",
+      "Seattle",
+      "Boston",
+      "London",
+      "Paris",
+      "Singapore",
+      "Seoul",
+      "Shanghai",
+      "Melbourne",
+      "Abu Dhabi",
+      "China",
+      "North America",
+      "Northern Europe",
+      "Western Europe"
+    ]
+  },
+  {
+    "people": [],
+    "organizations": [
+      "Massachusetts Institute of Technology"
+    ],
+    "locations": [
+      "North America",
+      "Western Europe",
+      "South Korea",
+      "Israel",
+      "Finland",
+      "Southeast Asia",
+      "Latin America",
+      "New York",
+      "London",
+      "Tokyo"
+    ]
+  },
+  {
+    "people": [
+      "Thomas Mueller"
+    ],
+    "organizations": [
+      "Princeton University",
+      "Paris School of Economics",
+      "General Motors",
+      "Volkswagen",
+      "Foxconn",
+      "European Union",
+      "Digital Commissioner",
+      "China"
+    ],
+    "locations": [
+      "Detroit",
+      "Manchester",
+      "Shenzhen",
+      "Washington DC",
+      "Brussels",
+      "Beijing"
+    ]
+  },
+  {
+    "people": [
+      "Thomas Mueller"
+    ],
+    "organizations": [
+      "China's Ministry of Science and Technology",
+      "National Institute of Standards and Technology",
+      "International Technology Policy Institute",
+      "Global AI Governance Council"
+    ],
+    "locations": [
+      "United States",
+      "Canada",
+      "Australia",
+      "Japan"
+    ]
+  },
+  {
+    "people": [],
+    "organizations": [
+      "IEEE",
+      "ISO"
+    ],
+    "locations": [
+      "American Midwest",
+      "Northern England",
+      "Southern China"
+    ]
+  },
+  {
+    "people": [],
+    "organizations": [
+      "International Technology Policy Institute",
+      "National Science Foundation",
+      "Hewlett Foundation",
+      "Center for Advanced Study in Behavioral Sciences at Stanford University",
+      "Harvard Kennedy School of Gove"
+    ],
+    "locations": [
+      "North America",
+      "Europe",
+      "Asia"
+    ]
+  },
+  {
+    "people": [
+      "Maria Gonzalez",
+      "James Kim"
+    ],
+    "organizations": [
+      "Center for Advanced Study in Behavioral Sciences",
+      "Stanford University",
+      "Harvard Kennedy School of Government"
+    ],
+    "locations": [
+      "Stanford"
+    ]
+  }
+]
